@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Love</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  
+  <div id="musicControl">▶️</div>
+  
+
+<body class="envelope-page">
+  <div class="envlope-wrapper fade-in">
+    <div id="envelope" class="close">
+      <div class="front flap"></div>
+      <div class="front pocket"></div>
+
+      <div class="letter">
+        <div class="words line1" id="toText"></div>
+        <div class="words line2" id="greetingText"></div>
+        <div class="words line3" id="line1Text"></div>
+        <div class="words line4" id="line2Text"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reset">
+    <button id="open">Open</button>
+    <button id="reset">Close</button>
+  </div>
+
+  <script>
+    /* Letter content (page-specific, safe to keep here) */
+    const letterContent = {
+      to: "To: My Love 💕",
+      greeting: "Dear Arunima,",
+      line1: "Every time I look at you,",
+      line2: "I fall for you all over again."
+    };
+
+    document.getElementById("toText").innerText = letterContent.to;
+    document.getElementById("greetingText").innerText = letterContent.greeting;
+    document.getElementById("line1Text").innerText = letterContent.line1;
+    document.getElementById("line2Text").innerText = letterContent.line2;
+  </script>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
